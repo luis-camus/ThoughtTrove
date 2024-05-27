@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block title %}ThoughtTrove{% endblock title %}
+{% block content %}
+<style>
+    .blog-card {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+    .blog-card img {
+        max-width: 100%;
+        height: auto;
+    }
+    .blog-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+    .blog-card p {
+        font-size: 0.875rem;
+        color: #777;
+    }
+
+    .container {
+        margin-top: 5em;
+    }
+
+    .button-group {
+        display: flex;
+    }
+    .button-group a {
+        text-shadow: 0;
+        animation: glow 1s ease-in-out infinite alternate;
+        transition: all 0.2s ease; /* Adjust the duration here */
+    }
+    
+    .button-group a:hover {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+        animation: glow 0.2s infinite alternate;
+    }
+
+   
+</style>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">ThoughtTrove</a>
+      <div class="button-group">
+      <a type="button" class="btn text-white" data-toggle="modal" data-target="#loginModal">
+        Write a Blog
+      </a>
+      <a type="button" class="btn text-white" data-toggle="modal" data-target="#loginModal">
+        User Name
+      </a>
+    </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="blog-card">
+                <img src="https://via.placeholder.com/350x150" alt="Blog 1">
+                <h3>Amazing Travel Adventures</h3>
+                <p>Explore the world through our travel stories.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="blog-card">
+                <img src="https://via.placeholder.com/350x150" alt="Blog 2">
+                <h3>Creative Cooking Recipes</h3>
+                <p>Delicious recipes for food enthusiasts.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="blog-card">
+                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
+                <h3>Tech Trends and Gadgets</h3>
+                <p>Stay updated with the latest tech news.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="blog-card">
+                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
+                <h3>Tech Trends and Gadgets</h3>
+                <p>Stay updated with the latest tech news.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="blog-card">
+                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
+                <h3>Tech Trends and Gadgets</h3>
+                <p>Stay updated with the latest tech news.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="blog-card">
+                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
+                <h3>Tech Trends and Gadgets</h3>
+                <p>Stay updated with the latest tech news.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="blog-card">
+                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
+                <h3>Tech Trends and Gadgets</h3>
+                <p>Stay updated with the latest tech news.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="blog-card">
+                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
+                <h3>Tech Trends and Gadgets</h3>
+                <p>Stay updated with the latest tech news.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="blog-card">
+                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
+                <h3>Tech Trends and Gadgets</h3>
+                <p>Stay updated with the latest tech news.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
