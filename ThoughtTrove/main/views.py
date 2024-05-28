@@ -7,5 +7,12 @@ def landing_page(request):
 def register_page(request):
     return render(request, 'main/registerpage.html')
 
+def login(request):
+    return render(request, 'main/loginpage.html')
+
 def main(request):
     return render(request, 'main/mainpage.html')
+
+def blog(request):
+    return render(request, 'main/blogcontent.html')
+

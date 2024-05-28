@@ -45,12 +45,13 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="/">ThoughtTrove</a>
       <div class="button-group">
-      <a type="button" class="btn text-white" data-toggle="modal" data-target="#loginModal">
+      <a type="button" class="btn text-white" href="/blogs/create">
         Write a Blog
       </a>
-      <a type="button" class="btn text-white" data-toggle="modal" data-target="#loginModal">
-        User Name
+      <a type="button" class="btn text-white" >
+        {{user.first_name}}
       </a>
+      <a type="button" class="btn text-white" href="/accounts/logout">logout</a>
     </div>
     </div>
   </nav>
