@@ -24,7 +24,7 @@ body {
 </style>
 <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">ThoughtTrove</a>
+      <a class="navbar-brand" href="/main">ThoughtTrove</a>
       <div class="button-group">
       <a type="button" class="btn text-white">
         Write a Blog
@@ -38,7 +38,8 @@ body {
   </nav>
   <div class="write-blog-content-ctnr">
   <form action="" method="post" class="form-container" enctype="multipart/form-data">
-    {% csrf_token%}
+    <h2>Write Blog</h2>
+    {% csrf_token %}
     {{form}}
     <button type="submit" class="btn btn-primary mt-2">Submit</button>
 </form>

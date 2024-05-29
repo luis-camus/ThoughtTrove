@@ -10,7 +10,7 @@
     }
     .blog-card img {
         max-width: 100%;
-        height: auto;
+        height: 425px;
     }
     .blog-card h3 {
         font-size: 1.25rem;
@@ -39,6 +39,10 @@
         animation: glow 0.2s infinite alternate;
     }
 
+    .blog-image {
+        width: 100%;
+        height: 20px;
+    }
    
 </style>
 <nav class="navbar navbar-dark bg-dark fixed-top">
@@ -58,78 +62,16 @@
 
   <div class="container">
     <div class="row">
+        {% for blog in blogs %}
         <div class="col-md-4">
             <div class="blog-card">
-                <img src="https://via.placeholder.com/350x150" alt="Blog 1">
-                <h3>Amazing Travel Adventures</h3>
-                <p>Explore the world through our travel stories.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <img src="media/{{blog.blog_image}}" alt="Blog 1" class="blog-image">
+                <h3>{{blog.title}}</h3>
+                <p>{{blog.intro_text}}</p>
+                <a href="blogs/{{blog.id}}" class="btn btn-primary">Read More</a>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/350x150" alt="Blog 2">
-                <h3>Creative Cooking Recipes</h3>
-                <p>Delicious recipes for food enthusiasts.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
-                <h3>Tech Trends and Gadgets</h3>
-                <p>Stay updated with the latest tech news.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
-                <h3>Tech Trends and Gadgets</h3>
-                <p>Stay updated with the latest tech news.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
-                <h3>Tech Trends and Gadgets</h3>
-                <p>Stay updated with the latest tech news.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
-                <h3>Tech Trends and Gadgets</h3>
-                <p>Stay updated with the latest tech news.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
-                <h3>Tech Trends and Gadgets</h3>
-                <p>Stay updated with the latest tech news.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
-                <h3>Tech Trends and Gadgets</h3>
-                <p>Stay updated with the latest tech news.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/350x150" alt="Blog 3">
-                <h3>Tech Trends and Gadgets</h3>
-                <p>Stay updated with the latest tech news.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
+        </div> 
+        {% endfor %} 
     </div>
 </div>
 {% endblock content %}
