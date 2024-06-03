@@ -4,6 +4,7 @@ from .models import Blog
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 # Create your views here.
 @login_required
 def create_blog(request):
@@ -25,6 +26,14 @@ def create_blog(request):
 def view_blog(request, blog_id):
     blog = Blog.objects.filter(id=blog_id)
     author = User.objects.filter(id=blog[0].author_id)
-    print(author[0])
-    print(blog[0].blog_image)
-    return render(request, 'main/blog.html', {'blog': blog, 'author': author[0]})
+    title = blog[0].title
+    is_blog_owned_by_user = blog[0].author_id == request.user.id
+    print(is_blog_owned_by_user)
+    return render(request, 'main/blog.html', {'blog': blog, 'author': author[0], 'title': title, 'owned': is_blog_owned_by_user})
+
+def delete_blog(request, blog_id):
+    blog_to_delete = get_object_or_404(Blog, pk=blog_id)
+    blog_to_delete.delete()
+    blogs = Blog.objects.filter(author_id=request.user.id)
+    render(request, 'main/profilepage.html', {'blogs': blogs})
+    return redirect('/profile')

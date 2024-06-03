@@ -28,16 +28,6 @@
     .button-group {
         display: flex;
     }
-    .button-group a {
-        text-shadow: 0;
-        animation: glow 1s ease-in-out infinite alternate;
-        transition: all 0.2s ease; /* Adjust the duration here */
-    }
-    
-    .button-group a:hover {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-        animation: glow 0.2s infinite alternate;
-    }
 
     .blog-image {
         width: 100%;
@@ -47,12 +37,12 @@
 </style>
 <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">ThoughtTrove</a>
+      <a class="navbar-brand" href="/main">ThoughtTrove</a>
       <div class="button-group">
       <a type="button" class="btn text-white" href="/blogs/create">
         Write a Blog
       </a>
-      <a type="button" class="btn text-white" >
+      <a type="button" class="btn text-white" href="/profile">
         {{user.first_name}}
       </a>
       <a type="button" class="btn text-white" href="/accounts/logout">logout</a>
